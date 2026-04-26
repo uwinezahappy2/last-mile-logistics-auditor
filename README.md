@@ -7,7 +7,7 @@ An analysis of Veridi Logistics' delivery data reveals that inaccurate estimated
 B. Project Links
 Link to Notebook: https://colab.research.google.com/drive/1zYPyN1Cv1GJsPwsTvhm9kQqY5Etbq1Nd#scrollTo=phP3IGkW5oc2
 Link to Dashboard: https://datastudio.google.com/u/0/reporting/f41228c0-6d04-418b-9857-e417a4bb0f3e/page/EcNwF/edit
-Link to Presentation: [ADD PRESENTATION LINK HERE]
+Link to Presentation: https://docs.google.com/presentation/d/1NUXFaVUqkxnLxKzccw7RyIBiHsmYo6WSlpQ1_IvaBS0/edit?slide=id.g3d96df1f861_0_21#slide=id.g3d96df1f861_0_21
 C. Technical Explanation
 Data Cleaning:The Olist dataset presented two major cleaning challenges. First, the order_reviews_dataset contained multiple reviews for a single order_id (customers updating their reviews). To prevent row duplication during the join—which would have ruined our aggregation metrics—I deduplicated the reviews by keeping only the last submitted review per order. Second, I excluded all orders with a status of 'canceled' or 'unavailable', as these lacked actual delivery dates and would have skewed the delay calculations. Date columns were converted to datetime objects to allow for accurate mathematical subtraction.
 
